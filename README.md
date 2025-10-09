@@ -16,8 +16,8 @@
     </header>
     <main>
         <section>
-            <h2>Main Banner</h2>
-            <p>Brief introduction to the business or website.</p>
+            <h2>The Sneaky Golems</h2>
+            <p>We give anime recommendations. Click on our options above to navigate through our website!</p>
         </section>
     </main>
     <footer>
