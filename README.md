@@ -3,12 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home - Sofia Martinez</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to [Client Name]</h1>
+        <h1>Welcome Sofia Martinez</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
