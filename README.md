@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home - [Client Name]</title>
+    <title>Home - Sofia Martinez</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
