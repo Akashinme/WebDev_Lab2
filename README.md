@@ -11,7 +11,7 @@
         <nav>
             <a href="http://127.0.0.1:5500/Lab2_WebDev.html">Home</a>
             <a href="about.html">About</a>
-            <a href="file:///C:/Users/siond/OneDrive/Desktop/programming/1/Web%20development/contact.html">Contact</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
     <main>
