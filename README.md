@@ -11,7 +11,7 @@
         <nav>
             <a href="http://127.0.0.1:5500/Lab2_WebDev.html">Home</a>
             <a href="about.html">About</a>
-            <a href="[http://127.0.0.1:5500/contact.html](https://1drv.ms/u/c/98226b220d5169fc/ER0SMXnQ0rVKnG8SO2okGJMB-IZZoRar5Fhw8LiJAFb3sA?e=qQ3WdW)">Contact</a>
+            <a href="http://127.0.0.1:5500/contact.html](https://1drv.ms/u/c/98226b220d5169fc/ER0SMXnQ0rVKnG8SO2okGJMB-IZZoRar5Fhw8LiJAFb3sA?e=qQ3WdW">Contact</a>
         </nav>
     </header>
     <main>
