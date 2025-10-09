@@ -9,7 +9,7 @@
     <header>
         <h1>Welcome Sofia Martinez</h1>
         <nav>
-            <a href="http://127.0.0.1:5500/Lab2_WebDev.html">Home</a>
+            <a href="homepage.html">Home</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
