@@ -106,6 +106,17 @@ button:hover {
 button:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgb(160, 65, 255);
+  
+.section {
+  padding: 40px 20px;
+}
+
+.section-divider {
+  border: none;
+  height: 2px;
+  background-color: #ccc;
+  margin: 60px 0;
+}
 
 }
 
