@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About</title>
+  <link rel="stylesheet" href="aboutcolour.css" />
+</head>
+<body>
+  <header>
+    <div class="main-heading">
+    <h1> About Website </h1>
+    </div>
+  </header>
 
+  <main>
+    <section class="fade-in">
+     <div class="purple-box">
+        <h2>About the Website</h2>
+      <p>
+        <strong>Anime Recommendations</strong> was created as a calm and welcoming space for anime lovers to find 
+        recommendations without feeling overwhelmed.  
+        The design focuses on accessibility, readability, and low-sensory comfort; 
+        using soft colors, clear navigation, and gentle animations.  
+      </p>
+      <p>
+        The goal is to make anime discovery enjoyable for everyone, including people who are 
+        autistic, neurodivergent, or simply prefer a quieter digital environment.
+      </p>
+      </div>
+    </section>
+
+
+<div class="fact-box" id="fact-box"> 
+  Click the button to get a random fact about me.
+</div>
+<button class="fact-btn" onclick="showFact()">Get Fact</button>
+
+<script>
+  const facts = [
+    "I have attended over 10 anime conventions.",
+    "My favorite anime genre is slice of life.",
+    "I started cosplaying in high school.",
+    "I am the founder of my university's anime society.",
+    "I love collecting anime figures."
+  ];
+  function showFact() {
+    const randomFact = facts[Math.floor(Math.random() * facts.length)];
+    document.getElementById('fact-box').innerText = randomFact;
+  }
+</script>
+
+    <section class="fade-in">
+        <div class="purple-box">
+      <h2>About the Creator</h2>
+        Hi! I'm <strong>Sofia</strong>, an anime enthusiast and accessibility advocate.  
+        I created Anime Haven to combine two of my passions: story telling through animation and 
+        inclusive web design.  
+        I believe everyone deserves a space to explore what they love without stress or sensory overload.  
+        This site is built with that care in mind — simple layouts, reduced motion options, and 
+        meaningful recommendations curated by hand.
+        With over five years of streaming, I have decided to begin sharing my recommendations for the best animes to watch. I enjoy attending conventions with my friends, cosplaying as different characters and meeting new people. I am a senior in university in the US and am the founder of the anime society! I can't wait to share my knowledge and hopefully help you find your next great watch!
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
