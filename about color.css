@@ -1,1 +1,152 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
 
+body {
+  font-family: 'Times New Roman', Times, serif;
+  color: #000000;
+  background-image: url("https://images.unsplash.com/photo-1557409518-691ebcd96038?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGphcGFufGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.main-heading {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 5.7em;
+  color: yellow;
+  Border-radius: 10px;
+  padding: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  margin: auto;
+}
+
+h2{
+  background-image: linear-gradient(to right, violet, purple); 
+  border-radius: 20px;
+  color: yellow;    
+  margin: 20px;           
+  border: 10px solid black;    
+}
+
+.purple-box {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 8% auto;
+  background-image: linear-gradient(to right, violet, purple);
+  border-radius: 20px;
+  padding: 40px;
+  color: #333;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+  text-align: left;
+  line-height: 1.8;
+  backdrop-filter: blur(3px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover animation for float effect */
+.purple-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 40px rgba(255, 182, 193, 0.4);
+}
+
+/* Title inside white box */
+.purple-box h1,
+.purple-box h2 {
+  color: indigo; 
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Paragraphs inside */
+.purple-box p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* Border accent */
+.purple-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 182, 193, 0.4);
+  pointer-events: none;
+}
+
+/* Petals accent animation */
+.purple-box::after {
+  content: "✿ ✿ ✿";
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: indigo;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .purple-box {
+    margin: 15% 5%;
+    padding: 25px;
+  }
+
+  .purple-box h1 {
+    font-size: 1.8rem;
+  }
+
+  .purple-box p {
+    font-size: 1rem;
+  }
+}
+
+    .fact-box {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2em;
+    max-width: 900px;
+    margin: 50px;
+    padding: 15px;
+    background-image: linear-gradient(to right, violet, purple);
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .fact-btn {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background-image: linear-gradient(to right, violet, purple);
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
