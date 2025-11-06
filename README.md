@@ -1,5 +1,4 @@
 # WebDev_Lab2
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +6,7 @@
 </head>
 <body>
     <header>
-        <h1>Welcome Sofia Martinez</h1>
+        <h1>Welcome Sofia Martinez! Click on "home" to get started!</h1>
         <nav>
             <a href="homepage.html">Home</a>
             <a href="about.html">About</a>
