@@ -11,6 +11,7 @@
             <a href="homepage.html">Home</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
+            <a href="additional.html">Additional</a>
         </nav>
     </header>
     <main>
