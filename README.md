@@ -20,7 +20,7 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 [Client Name]. All rights reserved.</p>
+        <p>Made by Allen Delos Santos, Daniel Alabi and Aoife Moran.</p>
     </footer>
 </body>
 </html>
