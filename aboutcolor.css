@@ -49,6 +49,19 @@ label:active:after {
   width: 20px
 }
 
+.background {
+  width: 100vw;
+  height: 100vh;
+  background: #ffff;
+  z-index: -1;
+  position: absolute;
+  transition: 0.3s;
+}
+
+input:checked + label + .background {
+  background: #242424;
+}
+  
 
 body {
   font-family: 'Times New Roman', Times, serif;
