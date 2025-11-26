@@ -1,74 +1,73 @@
 <!DOCTYPE html>
-<html>
 <html lang="en">
+
 <head>
-  <title>About</title>
-  <link rel="stylesheet" href="aboutcolor.css" />
-  
+    <meta charset="UTF-8" />
+    <title>About</title>
+    <link rel="stylesheet" href="aboutcolor.css" />
 </head>
+
 <body>
-  <header>
-    <input type="checkbox" id="darkmode-toggle">
-    <label for="darkmode-toggle"></label>
-    <div class="background"></div>
+
+    <header class="header">
+        <div class="logo">Dark Mode</div>
+        <input type="checkbox" id="dark-mode-toggle">
+        <label for="dark-mode-toggle" class="toggle"></label>
+    </header>
+
     <div class="main-heading">
-    <h1> About Website </h1>
+        <h1>About Website</h1>
     </div>
-  </header>
 
-  <main>
-    <section class="fade-in">
-     <div class="purple-box">
-        <h2>About the Website</h2>
-      <p>
-        <strong>Anime Recommendations</strong> was created as a calm and welcoming space for anime lovers to find 
-        recommendations without feeling overwhelmed.  
-        The design focuses on accessibility, readability, and low-sensory comfort; 
-        using soft colors, clear navigation, and gentle animations.  
-      </p>
-      <p>
-        The goal is to make anime discovery enjoyable for everyone, including people who are 
-        autistic, neurodivergent, or simply prefer a quieter digital environment.
-      </p>
-      </div>
-    </section>
+    <main>
 
+        <div class="top-row">
 
-<div class="fact-box" id="fact-box"> 
-  Click the button to get a random fact about me.
-</div>
-<button class="fact-btn" onclick="showFact()">Get Fact</button>
+            <div class="purple-box">
+                <h2>About the Website</h2>
+                <p><strong>Anime Recommendations</strong> was created to be calm, soft and sensory-friendly.</p>
+                <p>Simple navigation, easy reading, and a peaceful place to explore anime.</p>
+                <p>The goal was to make something cozy — a space where people don’t feel overwhelmed.</p>
+            </div>
 
-<script>
-  const facts = [
-    "I have attended over 10 anime conventions.",
-    "My favorite anime genre is slice of life.",
-    "I started cosplaying in high school.",
-    "I am the founder of my university's anime society.",
-    "I love collecting anime figures."
-  ];
-  function showFact() {
-    const randomFact = facts[Math.floor(Math.random() * facts.length)];
-    document.getElementById('fact-box').innerText = randomFact;
-  }
-</script>
+            <div class="purple-box">
+                <h2>About the Creator</h2>
+                  <p>Hi! I'm <strong>Sofia</strong>, an anime enthusiast and accessibility advocate.</p>
+                  <p>I created Anime Haven to combine two of my passions: storytelling through animation and inclusive web design.</p>
+                  <p>I believe everyone deserves a space to explore what they love without stress or sensory overload.</p>
+                  <p>This site is built with that care in mind — simple layouts, reduced motion options, and hand-curated recommendations.</p>
+                  <p>With over five years of streaming, I finally decided to share my recommendations publicly.</p>
+                  <p>I enjoy attending conventions, cosplaying different characters, and meeting new people.</p>
+                  <p>I am a senior in university in the US and the founder of the anime society!</p>
+                  <p>I hope this space helps you find your next favorite anime.</p>
+            </div>
 
-    <section class="fade-in">
-        <div class="purple-box">
-      <h2>About the Creator</h2>
-        <p>Hi! I'm <strong>Sofia</strong>, an anime enthusiast and accessibility advocate. </p> 
-        <p>I created Anime Haven to combine two of my passions: story telling through animation and 
-        inclusive web design.</p> 
-        <p>I believe everyone deserves a space to explore what they love without stress or sensory overload.</p>  
-        <p>This site is built with that care in mind — simple layouts, reduced motion options, and 
-        meaningful recommendations curated by hand.</p>
-        <p>With over five years of streaming, I have decided to begin sharing my recommendations for the best animes to watch. 
-          I enjoy attending conventions with my friends, cosplaying as different characters and meeting new people.</p> 
-        <p>I am a senior in university in the US and am the founder of the anime society!</p> 
-          <p>I can't wait to share my knowledge and hopefully help you find your next great watch!</p>
-      </div>
-    </section>
-  </main>
+        </div>
+
+        <div class="fact-section">
+            <div class="fact-box" id="fact-box">
+                Click the button to get a random fact about me.
+            </div>
+
+            <button class="fact-btn" onclick="showFact()">Get Fact</button>
+        </div>
+
+    </main>
+
+    <script>
+        const facts = [
+            "I have attended over 10 anime conventions.",
+            "My favorite anime genre is slice of life.",
+            "I started cosplaying in high school.",
+            "I founded my university's anime society.",
+            "I love collecting anime figures."
+        ];
+
+        function showFact() {
+            const randomFact = facts[Math.floor(Math.random() * facts.length)];
+            document.getElementById("fact-box").innerText = randomFact;
+        }
+    </script>
 
 </body>
 </html>
