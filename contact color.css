@@ -1,3 +1,4 @@
+
 /* Page background and text */
 
 section {
@@ -100,8 +101,50 @@ div {
   width: 50%;
   color: yellow;
   margin: 20px auto; /* this centers the whole div horizontally */
-  border: 10px solid black;
-  background-position: center;
+  border: solid black;
+  background-color: #979ea2;
   font-family: 'Times New Roman', Times, serif;
 }
+/* Dropdown Button */
+.dropbtn {
+  background-color: #58636a;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
 
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #979ea2;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
