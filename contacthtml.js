@@ -22,14 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
         inputField.required = true;
         break;
       
-      
-      case "eng":
-        inputField.placeholder = "Enter your contact info";
-        inputField.type = "none";
-        inputField.required = true;
+      case "none":
+        inputField.placeholder = "No contact info required";
+        inputField.type = "text";
+        inputField.value = "";
+        inputField.required = false;
         break;
-
-
     }
   });
 });
