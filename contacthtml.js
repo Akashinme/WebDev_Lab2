@@ -15,24 +15,31 @@ document.addEventListener("DOMContentLoaded", () => {
         inputField.placeholder = "Enter your email";
         inputField.type = "email";
         inputField.required = true;
+
+        // remove old filter
+        inputField.oninput = null;
         break;
 
-    case "spa":
-    inputField.placeholder = "Enter your phone number";
-    inputField.type = "tel";
-    inputField.required = true;
+      case "spa":
+        inputField.placeholder = "Enter your phone number";
+        inputField.type = "tel";
+        inputField.required = true;
 
-    inputField.addEventListener("input", () => {
-        inputField.value = inputField.value.replace(/[^0-9+\-\s]/g, "");
-    });
-    break;
+        // REMOVE LETTERS IN REAL TIME
+        inputField.oninput = () => {
+          inputField.value = inputField.value.replace(/[^0-9+\-\s]/g, "");
+        };
 
+        break;
 
       case "none":
         inputField.placeholder = "No contact info required";
         inputField.type = "text";
         inputField.value = "";
         inputField.required = false;
+
+        // remove old filter
+        inputField.oninput = null;
         break;
     }
   });
@@ -104,11 +111,11 @@ document.addEventListener("DOMContentLoaded", () => {
         hasErrors = true;
       }
     }
-    
-    if (type === "spa") {
-     const phoneRegex = /^[0-9]{7,}$/;
 
-    if (!phoneRegex.test(contactInfo.value.trim())) {
+    if (type === "spa") {
+      const phoneRegex = /^[0-9+\-\s]+$/;
+
+      if (!phoneRegex.test(contactInfo.value.trim())) {
         showError(contactInfo, "Please enter a valid phone number.");
         hasErrors = true;
       }
