@@ -1,53 +1,69 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <html>
-<script src ="contacthtml.js"></script>
-    <head>
-         <link rel="stylesheet" href="contact color.css">
-         <title>www.sneakygolems/contactinfo.com</title>
-         <section>
-         <h1 style="text-align: center;">Contact us (お問い合わせ)</h1>
-         </section>
-    </head>
+<script src="contacthtml.js"></script>
+<head>
+    <link rel="stylesheet" href="contact color.css">
+    <title>www.sneakygolems/contactinfo.com</title>
+    <section>
+        <h1 style="text-align: center;">Contact us (お問い合わせ)</h1>
+    </section>
+</head>
 
-    <body><h2>
-<p style="text-align: center; ">
-  If you have any suggestions about the content on the site or any questions, submit a request <br>
-  (サイトの内容についてご意見や質問がある場合は、リクエストを送信してください)
+<body>
+    <h2>
+        <p style="text-align: center; ">
+            If you have any suggestions about the content on the site or any questions, submit a request <br>
+            (サイトの内容についてご意見や質問がある場合は、リクエストを送信してください)
     </h2>
 
-<img src="https://vignette.wikia.nocookie.net/clashroyale/images/d/d4/GolemCard.png/revision/latest?cb=20171212204759" alt="Golem"
-     style="display: block; margin: 0 auto;">
-     <div>
-    <h1 style="text-align: center;
-           color: yellow;
-           text-shadow: -3px -3px 0 black,
-                        3px -3px 0 black,
-                        -3px 3px 0 black,
-                        3px 3px 0 black;">
-</h1>
-</h1>
-    <form id="contactForm" novalidate>
-    <div>
-        <input type="text" name="first" placeholder="First Name" autocomplete="off" required>
-    <input type="text" name="last" placeholder="Last Name" autocomplete="off" required>
-    <div class="formMultiSelect" id=”langdropdown”>
-    <select name=" langdropdown ">
-       <option value="0" selected="selected">Choose type of contact</option>
-       <option value="eng">Email</option>
-       <option value="spa">Phone number</option>
-       <option value="none">None</option>
-    </select>
-    <input type="text" id="ddepartment" name="ddepartment">
-</div>
-    <textarea rows="5" cols="60" name="message" placeholder="Enter text" autocomplete="off" required></textarea>
-    <button type="submit">Send Message</button>
-<a href="homepage.html">
-  <button type="button">Go back</button>
-</a>
-</a>
+    <img src="https://vignette.wikia.nocookie.net/clashroyale/images/d/d4/GolemCard.png/revision/latest?cb=20171212204759"
+        alt="Golem" style="display: block; margin: 0 auto;">
+
+    <!-- ✅ FORM ADDED (wraps all inputs) -->
+    <form id="contactForm">
+
+        <div>
+            <h1 style="text-align: center;
+               color: yellow;
+               text-shadow: -3px -3px 0 black,
+                            3px -3px 0 black,
+                            -3px 3px 0 black,
+                            3px 3px 0 black;">
+            </h1>
+
+            <input type="text" name="first" placeholder="First Name" autocomplete="off" required>
+            <input type="text" name="last" placeholder="Last Name" autocomplete="off" required>
+
+            <!-- FIXED invalid quotes + added ID for JS validation -->
+            <div class="formMultiSelect" id="langdropdown">
+
+                <!-- ADDED id="contactType" -->
+                <select name="langdropdown" id="contactType">
+                    <option value="0" selected="selected">Choose type of contact</option>
+                    <option value="eng">Email</option>
+                    <option value="spa">Phone number</option>
+                    <option value="none">None</option>
+                </select>
+
+                <input type="text" id="ddepartment" name="ddepartment">
+            </div>
+
+            <textarea rows="5" cols="60" name="message" placeholder="Enter text" autocomplete="off"
+                required></textarea>
+
+            <button type="submit">Send Message</button>
+
+            <a href="homepage.html">
+                <button type="button">Go back</button>
+            </a>
+        </div>
+
+    </form>
+    <!-- END FORM -->
+
 </body>
-    </body>
+
 </html>
+
