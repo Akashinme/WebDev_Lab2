@@ -101,13 +101,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     if (type === "spa") {
-      const phoneRegex = /^[0-9\-\+\s]+$/;
-      inputField.addEventListener("input", () => {
-    inputField.value = inputField.value.replace(/[A-Za-z]/g, "");
-    });
+     const phoneRegex = /^[0-9]{7,}$/;
 
-
-      if (!phoneRegex.test(contactInfo.value.trim())) {
+    if (!phoneRegex.test(contactInfo.value.trim())) {
         showError(contactInfo, "Please enter a valid phone number.");
         hasErrors = true;
       }
