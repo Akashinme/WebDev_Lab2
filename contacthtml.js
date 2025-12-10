@@ -1,13 +1,13 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-  const dropdown = document.querySelector("select[name=' langdropdown ']");
+  
+  const dropdown = document.getElementById("contactType");
   const inputField = document.getElementById("ddepartment");
+  const form = document.getElementById("contactForm");
 
-  if (!dropdown || !inputField) return;
-
-  dropdown.addEventListener("change", function () {
-    const value = this.value;
-
+  // Change placeholder + type when dropdown changes
+  dropdown.addEventListener("change", () => {
+    const value = dropdown.value;
 
     switch (value) {
       case "eng":
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         inputField.type = "tel";
         inputField.required = true;
         break;
-      
+
       case "none":
         inputField.placeholder = "No contact info required";
         inputField.type = "text";
@@ -29,46 +29,40 @@ document.addEventListener("DOMContentLoaded", () => {
         inputField.required = false;
         break;
 
-        // --- FORM VALIDATION ---
-document.addEventListener("DOMContentLoaded", () => {
+      default:
+        inputField.placeholder = "";
+        inputField.type = "text";
+        inputField.required = false;
+    }
+  });
 
-  const form = document.getElementById("contactForm");
-  const dropdown = document.getElementById("contactType");
-  const inputField = document.getElementById("ddepartment");
-
+  // Form validation
   form.addEventListener("submit", function (e) {
     let errors = [];
 
-    const first = document.querySelector("input[name='first']").value.trim();
-    const last = document.querySelector("input[name='last']").value.trim();
-    const message = document.querySelector("textarea[name='message']").value.trim();
-    const contactValue = inputField.value.trim();
+    const first = document.getElementById("first").value.trim();
+    const last = document.getElementById("last").value.trim();
+    const message = document.getElementById("message").value.trim();
     const type = dropdown.value;
+    const contactValue = inputField.value.trim();
 
     if (first === "") errors.push("First name is required.");
     if (last === "") errors.push("Last name is required.");
     if (message === "") errors.push("Message cannot be empty.");
+    if (type === "") errors.push("Please choose a contact type.");
 
-    if (type === "0" || type === "") {
-      errors.push("Please choose a contact type.");
+    if (type === "eng" && !contactValue.match(/^[^@]+@[^@]+\.[^@]+$/)) {
+      errors.push("Please enter a valid email.");
     }
 
-    if (type === "eng") {
-      if (!contactValue.match(/^[^@]+@[^@]+\.[^@]+$/)) {
-        errors.push("Please enter a valid email.");
-      }
-    }
-
-    if (type === "spa") {
-      if (!contactValue.match(/^[0-9\-\+\s]+$/)) {
-        errors.push("Please enter a valid phone number.");
-      }
+    if (type === "spa" && !contactValue.match(/^[0-9\-\+\s]+$/)) {
+      errors.push("Please enter a valid phone number.");
     }
 
     if (errors.length > 0) {
       e.preventDefault();
       alert("Please fix the following:\n\n" + errors.join("\n"));
+      return false;
     }
   });
 });
-
