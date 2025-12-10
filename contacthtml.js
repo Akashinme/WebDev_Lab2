@@ -17,11 +17,16 @@ document.addEventListener("DOMContentLoaded", () => {
         inputField.required = true;
         break;
 
-      case "spa":
-        inputField.placeholder = "Enter your phone number";
-        inputField.type = "tel";
-        inputField.required = true;
-        break;
+    case "spa":
+    inputField.placeholder = "Enter your phone number";
+    inputField.type = "tel";
+    inputField.required = true;
+
+    inputField.addEventListener("input", () => {
+        inputField.value = inputField.value.replace(/[^0-9+\-\s]/g, "");
+    });
+    break;
+
 
       case "none":
         inputField.placeholder = "No contact info required";
