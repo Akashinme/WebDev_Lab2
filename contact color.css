@@ -148,3 +148,17 @@ div {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+/* Error red border */
+.input-error {
+    border: 3px solid red !important;
+}
+
+/* Error message text */
+.error-message {
+    color: red;
+    font-size: 16px;
+    margin: -10px 0 10px 12%;
+    font-weight: bold;
+}
+
